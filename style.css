@@ -1,5 +1,20 @@
 #container{
-    width: 90%;
-    height: 90%;
-    color:chartreuse;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#container_pendu{
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+}
+#container_letters{
+    width: 90vw;
+    display: flex;
+}
+
+.letters{
+    padding: 5px;
 }
