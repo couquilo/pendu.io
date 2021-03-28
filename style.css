@@ -1,20 +1,28 @@
-#container{
-    width: 100vw;
-    height: 100vh;
+#container {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    height: 50vh;
 }
 
-#container_pendu{
-    height: 100px;
-    width: 100px;
-    background-color: aquamarine;
-}
-#container_letters{
-    width: 90vw;
+#container_pendu {
     display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-.letters{
-    padding: 5px;
+img {
+    width: 300px;
+}
+
+#container_letters {
+    display: flex;
+    justify-content: space-between;
+}
+
+.letters {
+    padding: 10px;
+    background-color: greenyellow;
 }
