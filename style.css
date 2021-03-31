@@ -3,26 +3,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     width: 80vw;
-    height: 50vh;
+    height: 80vh;
 }
 
 #container_pendu {
     display: flex;
     justify-content: center;
-    width: 100%;
 }
 
 img {
     width: 300px;
 }
 
-#container_letters {
+#container_lettres {
     display: flex;
-    justify-content: space-between;
 }
 
-.letters {
+.lettres {
     padding: 10px;
     background-color: greenyellow;
+}
+
+#reponse {
+    border: none;
 }
