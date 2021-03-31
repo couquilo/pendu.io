@@ -49,8 +49,11 @@ function iclicked() {
 //GAGNE
 function gagne(nb_Erreur) {
     retire_tous_event_click(all_lettres)
-    container_reponse.innerHTML = `<div id="gagne">Einstein a vécu ${nb_Erreur + 1} vies.</div><div id="gagne">
-    <div>En vivant seulement ${nb_Erreur} vie(s) tu deviens donc meilleur que lui ! </div>`
+    container_reponse.innerHTML = `
+    <div id="gagne">Bien joué ! La réponse était <span id="user_word_choice">${name.join('')}<span>.</div>
+    <div id="gagne">Einstein a vécu ${nb_Erreur + 1} vies.</div>
+    <div id="gagne">En vivant seulement ${nb_Erreur} vie(s) tu deviens donc meilleur que lui ! </div>
+    `
 }
 
 // actualisation placeholder sur l'input
@@ -70,7 +73,10 @@ function actualisation_reponse_input() {
 //PERDU
 function perdu(nombre_de_vies) {
     retire_tous_event_click(all_lettres)
-    container_reponse.innerHTML = `<div id="perdu">${nombre_de_vies} vies ne t'auront donc pas suffit ?!</div>`
+    container_reponse.innerHTML = `
+    <div id="gagne">Bon allé je t'aide. La réponse était <span>${name}<span>.</div>
+    <div id="perdu">${nombre_de_vies} vies ne t'auront donc pas suffit ?!</div>
+    `
 }
 
 // enlève tous l"event click() de chaque lettres

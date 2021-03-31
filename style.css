@@ -15,6 +15,7 @@
 
 img {
     width: 300px;
+    max-height: 500px;
 }
 
 #container_lettres {
@@ -24,6 +25,11 @@ img {
 .lettres {
     padding: 10px;
     background-color: greenyellow;
+    cursor: pointer;
+}
+
+.lettres:hover {
+    border: red solid 1px;
 }
 
 #reponse {
