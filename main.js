@@ -8,8 +8,6 @@ const all_lettres = [...document.getElementsByClassName('lettres')];
 const reponse_input = document.getElementById('reponse');
 
 
-
-//mot à trouver
 let name = prompt('quel mot doit il trouver')
 name = [...
     name
@@ -17,7 +15,6 @@ name = [...
 
 //ajout d'attribut onclick sur chaque lettre
 all_lettres.map(elem => elem.addEventListener('click', iclicked));
-
 
 
 
@@ -30,7 +27,7 @@ actualisation_reponse_input()
 function iclicked() {
     for (let i = 0; i < name.length; i++) {
         this.removeEventListener('click', iclicked)
-        if (name[i] == this.innerText) {
+        if (name[i].normalize("NFD").replace(/[\u0300-\u036f]/g, "") == this.innerText.toLowerCase()) {
             lettres_trouvées.push(name[i])
             this.style.backgroundColor = "blue"
             actualisation_reponse_input(this.innerText)
@@ -38,6 +35,7 @@ function iclicked() {
         }
         this.style.backgroundColor = "red"
         if (i == name.length - 1) {
+            console.log('ok')
             nb_Erreur += 1;
             actualisation_img_pendu(nb_Erreur);
             if (nb_Erreur == nombre_de_vies)
