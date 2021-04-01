@@ -15,74 +15,73 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 80vw;
+    width: 100vw;
     height: 100vh;
     background-color: #52575d;
-    margin-top: 5vh;
 }
 
 #container_pendu {
     display: flex;
     justify-content: center;
-    padding: 5vh;
-    background-color: #f6f4e6;
+    width: 80vw;
+    height: 33vh;
     margin-top: 5vh;
+    padding: 1vh 5vw;
+    background-color: #f6f4e6;
 }
 
 img {
     width: 20vw;
-    max-height: 20vw;
+    max-height: 20vh;
 }
 
 #container_lettres {
     display: flex;
     justify-content: space-around;
-    width: 80vw;
+    box-sizing: border-box;
+    width: 90vw;
 }
 
 .lettres {
+    width: 100%;
     text-align: center;
-    background-color: #52575d;
     cursor: pointer;
     font-size: 2em;
     text-transform: uppercase;
+    transition: all 0.2s ease;
+    border-left: #41444b solid 0.1vw;
+    border-right: #41444b solid 0.1vw;
+    border-top: #52575d solid 0.1vw;
+    border-bottom: #52575d solid 0.1vw;
+    background-color: #52575d;
 }
 
 .lettres:hover {
-    border: #fddb3a solid 1px;
+    border: #41444b solid 0.1vw 0.1vw;
+    background-color: #cdc733;
 }
 
 #container_reponse {
-    background-color: #fddb3a;
-    height: 24vh;
-    width: 100vw;
-    border-radius: 100% 100% 0% 0%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
-}
-
-#label {
-    margin: 2vh;
-    text-transform: uppercase;
-}
-
-#reponse {
-    text-align: center;
-    height: 20vh;
-    width: 80vw;
+    height: 25vh;
+    width: 100vw;
     border-radius: 100% 100% 0% 0%;
-    border: none;
-    font-size: 3em;
-    color: rgba(255, 0, 0, 0);
-    text-shadow: 0px 0px 1px #52575d;
-    background-color: #f6f4e6;
+    background-color: #cdc733;
+}
+
+.fin {
+    text-align: center;
+    width: 100vw;
+    transition: all 0.3s ease;
+    color: #52575d;
+    font-size: 2em;
     font-weight: bold;
 }
 
-#reponse:focus {
-    outline: none;
-    background-color: #52575d;
-    text-shadow: 0px 0px 1px #f6f4e6;
+#user_word_choice {
+    text-transform: uppercase;
+    color: #f6f4e6;
 }
